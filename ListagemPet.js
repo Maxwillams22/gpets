@@ -35,8 +35,8 @@ componentDidMount () {
             <View key={key}>
               <Text>{gpet.name}o</Text>
               <Text>{gpet.raca}o</Text>
-              <Button title='Editar' onPress={() => console.log('editou o animal')} />
-              <Button title='Excluir' onPress={() => console.log('excluiu o animal')} />
+              <Button title='Editar' onPress={() => this.props.history.push('/' + gpet._id)} />
+              <Button title='Excluir' onPress={() => this.onDelete(gpet._id)} />
               </View>
           ))}
         </View>
